@@ -15,11 +15,11 @@ const authRoutes = ['/login', '/register', '/forgot-password']
 function AppLayout({ children }) {
   const router = useRouter()
 
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
-  // useEffect(() => {
-  //   check().then(() => console.log('checked'))
-  // }, [])
+  useEffect(() => {
+    check().then(() => console.log('checked'))
+  }, [])
 
   async function check() {
     const isVerify = await UserStore.verifySession()

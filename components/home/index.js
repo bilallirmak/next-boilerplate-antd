@@ -19,7 +19,7 @@ const Home = () => {
       <Row justify={"center"} align={"middle"}>
         <Col >
           <TextTitle>
-            Welcome To ONCOTRUST PEDIGIRI
+            Welcome To Boilerplate
           </TextTitle>
         </Col>
       </Row>

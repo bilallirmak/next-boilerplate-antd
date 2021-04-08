@@ -51,7 +51,7 @@ const LoginForm = () => {
                             <Card bordered={false} className={styles.card}>
                                 <Row gutter={[0, 15]} justify={'center'}>
                                     <Col span={24}>
-                                        <TextTitle bold className={styles.title}>Sign In to ONCOTRUST PEDIGIRI</TextTitle>
+                                        <TextTitle bold className={styles.title}>Sign In to Boilerplate</TextTitle>
                                     </Col>
                                     <Col span={24}>
                                         <Form.Item

@@ -20,17 +20,17 @@ const authRoutes = ['/login', '/register', '/forgot-password']
 
 function MyApp({Component, pageProps}) {
   const router = useRouter()
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
 
-  // useEffect(() => {
-  //   !loading && setLoading(true)
-  //   if (UserStore.isLogin) {
-  //     init().then(() => console.log('REDIRECT TRUE'))
-  //     return
-  //   }
-  //   redirect(false).then(() => console.log('REDIRECT FALSE'))
-  // }, [UserStore.isLogin])
+  useEffect(() => {
+    !loading && setLoading(true)
+    if (UserStore.isLogin) {
+      init().then(() => console.log('REDIRECT TRUE'))
+      return
+    }
+    redirect(false).then(() => console.log('REDIRECT FALSE'))
+  }, [UserStore.isLogin])
 
   async function init() {
     const isVerify = await verify()

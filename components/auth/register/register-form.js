@@ -61,7 +61,7 @@ const RegisterForm = () => {
                             <AppCard bordered={false} className={styles.card}>
                                 <Row gutter={[0, 15]} justify={'center'}>
                                     <Col>
-                                        <TextTitle className={styles.title}>Sign Up to ONCOTRUST PEDIGIRI</TextTitle>
+                                        <TextTitle className={styles.title}>Sign Up to Boilerplate</TextTitle>
                                     </Col>
                                     <Col span={24}>
                                         <Form.Item

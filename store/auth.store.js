@@ -4,7 +4,6 @@ import StorageService from "../utils/storage";
 import StoreProvider from "../utils/store-provider";
 
 class AuthStore {
-  accessToken = null;
 
   constructor() {
     makeAutoObservable(this);
