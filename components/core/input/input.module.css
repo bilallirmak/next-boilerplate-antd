@@ -1,0 +1,33 @@
+.input {
+    height: 2.6rem;
+    font-size: medium;
+    border-radius: 8px;
+    background-color: var(--c-green);
+    border: 1px solid var(--c-green);
+    color: var(--c-white);
+
+    &:hover {
+        border-color: var(--c-green);
+    }
+
+    &:focus {
+        border-color: var(--c-green);
+    }
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--c-container);
+    border: 1px solid var(--c-container);
+    height: 2.6rem;
+    font-size: medium;
+    position: absolute;
+    padding: 0.7rem;
+    z-index: 1;
+}
+
+.icon:hover {
+    border: 1px solid var(--c-green);
+}

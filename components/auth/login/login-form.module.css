@@ -1,0 +1,85 @@
+.container {
+    min-height: 100vh;
+
+    input::placeholder {
+        color: #f9f9f9
+    }
+
+    a:hover {
+        color: var(--c-body-text-color);
+    }
+
+    icon {
+        color: var(--c-body-text-color);
+        background: none;
+    }
+
+    .button {
+        height: 2.4rem;
+        border-radius: 4px;
+        width: max-content;
+        margin: 10px 0;
+        padding: 0 50px;
+        border-color: var(--c-green);
+        color: var(--c-green);
+        font-weight: 500;
+        font-size: 16px;
+        transition-duration: 0.5s;
+
+        &:hover {
+            transition-duration: 0.5s;
+            background-color: var(--c-green);
+            border-color: var(--c-white);
+        }
+
+    }
+
+}
+
+.title {
+    font-size: 25px;
+    color: var(--c-green);
+    text-align: center;
+
+}
+
+.card {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    background-color: var(--c-white);
+
+}
+
+.input {
+    height: 2.4rem;
+    font-size: medium;
+    border-radius: 4px;
+    background-color: var(--c-green);
+
+}
+
+
+.label {
+    font-weight: 500;
+}
+
+.right {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-weight: 500;
+    color: var(--c-green);
+
+
+}
+
+
+.left {
+    margin-left: 1rem;
+    font-weight: 500;
+    color: var(--c-green);
+
+
+}
+

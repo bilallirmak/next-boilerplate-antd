@@ -1,0 +1,10 @@
+.card {
+  border-radius: 12px;
+  padding: 15px;
+  color: var(--c-white);
+  font-size: 15px;
+  /*border: 1px solid var(--c-border);*/
+  border: none;
+  background: var(--c-white) !important;
+  background: linear-gradient(315deg, var(--c-white) 35%, var(--c-white) 100%);
+}

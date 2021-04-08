@@ -1,0 +1,109 @@
+@body-background: var(--c-primary);
+
+@primary-color: #141417; // primary color for all components
+@link-color: #16C79A; // link color
+@success-color: #52c41a; // success state color
+@warning-color: #faad14; // warning state color
+@error-color: #f5222d; // error state color
+@font-size-base: 12px; // major text font size
+//@heading-color: rgba(0, 0, 0, 0.85); // heading text color
+@heading-color: rgba(0, 0, 0, 0.85); // heading text color
+@text-color: rgba(0, 0, 0); // major text color
+@font-family: "Montserrat";
+@text-color-secondary: rgba(0, 0, 0, 0.45); // secondary text color
+@text-selection-bg: var(--c-fticon);
+@disabled-color: rgba(0, 0, 0, 0.25); // disable state color
+@border-radius-base: 2px; // major border radius
+@border-color-base: #d9d9d9; // major border color
+@box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+  0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05); // major shadow for layers
+
+
+// Card
+// ---
+@card-head-color: var(--c-white) !important;
+@card-head-background: transparent !important;
+//@card-head-font-size: @font-size-lg;
+@card-head-font-size-sm: @font-size-base;
+@card-head-padding: 6px;
+@card-head-padding-sm: (@card-head-padding / 2);
+@card-head-height: 8px;
+@card-head-height-sm: 6px;
+@card-inner-head-padding: 2px;
+@card-padding-base: 4px;
+@card-padding-base-sm: (@card-padding-base / 2);
+@card-actions-background: transparent !important;
+@card-actions-li-margin: 2px 0;
+@card-skeleton-bg: #cfd8dc;
+@card-background: transparent; /// important vardı kaldırıldı
+@card-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12),
+0 5px 12px 4px rgba(0, 0, 0, 0.09);
+@card-radius: @border-radius-base;
+@card-head-tabs-margin-bottom: -10px;
+@card-head-extra-color: @text-color;
+
+
+// Tabs
+// ---
+// Table
+// --
+@table-bg: transparent;
+@table-header-bg: transparent;
+@table-header-color: var(--c-white);
+@table-header-sort-bg: transparent;
+@table-body-sort-bg: transparent;
+@table-row-hover-bg: transparent;
+@table-selected-row-bg: transparent;
+@table-body-selected-sort-bg: transparent;
+//@table-selected-row-hover-bg: transparent;
+@table-expanded-row-bg: transparent;
+@table-padding-vertical: 8px;
+@table-padding-horizontal: 8px;
+
+@table-border-color: transparent;
+@table-footer-bg: transparent;
+@table-footer-color: var(--c-white);
+@table-header-bg-sm: transparent;
+
+// Sorter
+// Legacy: `table-header-sort-active-bg` is used for hover not real active
+@table-header-sort-active-bg: transparent;
+// Filter
+@table-header-filter-active-bg: transparent;
+@table-filter-dropdown-bg: transparent;
+@table-expand-icon-bg: transparent;
+
+// Pagination
+// ---
+@pagination-item-bg: transparent;
+@pagination-item-size-sm: 24px;
+@pagination-font-family: @font-family;
+@pagination-font-weight-active: 500;
+@pagination-item-bg-active: var(--c-container);
+@pagination-item-link-bg: var(--c-container);
+@pagination-item-disabled-color-active: var(--c-white);
+@pagination-item-disabled-bg-active: tranprent;
+@pagination-item-input-bg: var(--c-container);
+@pagination-mini-options-size-changer-top: 0px;
+
+@btn-primary-color: #FFF;
+@btn-primary-bg: #333333;
+
+// Layout
+@layout-body-background: transparent;
+@layout-header-background: transparent;
+@layout-header-height: 64px;
+@layout-header-padding: 0 50px;
+@layout-header-color: @text-color;
+@layout-footer-padding: 24px 50px;
+@layout-footer-background: @layout-body-background;
+@layout-sider-background: @layout-header-background;
+@layout-trigger-height: 48px;
+@layout-trigger-background: #002140;
+@layout-trigger-color: #fff;
+@layout-zero-trigger-width: 36px;
+@layout-zero-trigger-height: 42px;
+// Layout light theme
+@layout-sider-background-light: #fff;
+@layout-trigger-background-light: #fff;
+@layout-trigger-color-light: @text-color;

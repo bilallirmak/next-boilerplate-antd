@@ -1,0 +1,7 @@
+.body {
+  color: var(--c-white)
+}
+
+.bold {
+  font-weight: bold;
+}
