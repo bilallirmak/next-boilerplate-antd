@@ -13,8 +13,8 @@ import '../store'
 import StoreProvider from "../utils/store-provider";
 import {observer} from "mobx-react-lite";
 import Loading from "../components/core/loading";
+import {stores, StoreWrap} from "../store";
 
-const UserStore = StoreProvider.getStore('UserStore')
 
 const authRoutes = ['/login', '/register', '/forgot-password']
 
@@ -22,6 +22,7 @@ function MyApp({Component, pageProps}) {
   const router = useRouter()
   const [loading, setLoading] = useState(true)
 
+  const {UserStore} = stores
 
   useEffect(() => {
     !loading && setLoading(true)
@@ -51,7 +52,7 @@ function MyApp({Component, pageProps}) {
         return setLoading(false)
       }
       await router.push('/login', null, {shallow: true})
-      return
+      return setLoading(false)
     }
     if (isAuthRoute) {
       return await router.push('/')
@@ -59,7 +60,7 @@ function MyApp({Component, pageProps}) {
   }
 
 
-  return loading ? <Loading/>: <Component {...pageProps} />
+  return loading ? <Loading/>: <StoreWrap store={{ ...stores }}> <Component {...pageProps} /></StoreWrap>
 }
 
 

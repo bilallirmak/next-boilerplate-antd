@@ -7,15 +7,14 @@ import AppInput from '../../core/input'
 import {RESPONSIVE_8} from '../../../constants'
 import Link from 'next/link'
 import {observer} from "mobx-react-lite";
-import StoreProvider from "../../../utils/store-provider";
-import TextBody from "../../core/text/body";
 import TextTitle from "../../core/text/title";
-import {LockOutlined, UserOutlined} from "@ant-design/icons";
+import {useStore} from "../../../store";
 
-const AuthStore = StoreProvider.getStore('AuthStore')
 
 const LoginForm = () => {
     const [submit, setSubmit] = useState(false)
+
+    const {AuthStore} = useStore()
 
     const onFinish = async (values) => {
         console.log('Success:', values);
@@ -34,7 +33,7 @@ const LoginForm = () => {
             name="basic"
             initialValues={{
                 email: "test1@test1.com",
-                password: "Abc1234+0"
+                password: "123123"
             }}
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}

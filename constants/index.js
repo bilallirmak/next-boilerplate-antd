@@ -3,8 +3,8 @@ export const THEME = {
   DARK: 'theme-dark'
 }
 
-export const DEFAULT_SITE_TITLE = 'Wellness Scale'
-export const DEFAULT_SITE_DESC = 'Wellness Scale Web Page'
+export const DEFAULT_SITE_TITLE = 'Pedigree'
+export const DEFAULT_SITE_DESC = 'Pedigree'
 
 export const RESPONSIVE_8 = {
   xl: 8,

@@ -1,18 +1,15 @@
-import {makeAutoObservable, action, runInAction} from "mobx";
-import userAPI from "../api/user.api";
-import StoreProvider from "../utils/store-provider";
-
+import { makeAutoObservable, action, runInAction } from 'mobx'
+import userAPI from '../api/user.api'
+import StoreProvider from '../utils/store-provider'
 
 class UserStore {
-  user = null;
-  isLogin = true;
-  loading = true;
-
+  user = null
+  isLogin = true
+  loading = true
 
   constructor() {
-    makeAutoObservable(this);
+    makeAutoObservable(this)
   }
-
 
   async verifySession() {
     // !this.loading && (this.loading = true)
@@ -37,12 +34,8 @@ class UserStore {
       const AuthStore = StoreProvider.getStore('AuthStore')
       await AuthStore.logout()
     }
-    runInAction(()=>{
-      this.isLogin = login
-    })
 
-
-
+    this.isLogin = login
   }
 
   removeUser() {
@@ -50,8 +43,6 @@ class UserStore {
     this.loading = false
     this.user = null
   }
-
-
 }
 
-export default new UserStore();
+export default new UserStore()

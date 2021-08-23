@@ -1,21 +1,22 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import cn from 'classnames'
 import styles from './index.module.css'
 import { useRouter } from 'next/router'
-import StoreProvider from "../../../utils/store-provider";
+import StoreProvider from '../../../utils/store-provider'
 import Loading from '../loading'
-import {Layout} from "antd";
+import { Layout } from 'antd'
+import { useStore } from '../../../store'
 
 const { Footer, Content, Header } = Layout
-
-const UserStore = StoreProvider.getStore('UserStore')
 
 const authRoutes = ['/login', '/register', '/forgot-password']
 
 function AppLayout({ children }) {
   const router = useRouter()
-
+  const { UserStore } = useStore()
   const [loading, setLoading] = useState(true)
+
+  const isAuthRoute = authRoutes.includes(router.pathname)
 
   useEffect(() => {
     check().then(() => console.log('checked'))
@@ -40,7 +41,13 @@ function AppLayout({ children }) {
     }
   }
 
-  return (
+  return isAuthRoute ? (
+    loading ? (
+      <Loading />
+    ) : (
+      children
+    )
+  ) : (
     <Layout className={styles.layout}>
       <Layout className={cn('site-layout')}>
         {/*<Header className={styles.header}>*/}
